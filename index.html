@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kavin R V – AI Researcher</title>
+    <!-- Import a modern sans‑serif font for a clean, academic feel -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- The lens element follows the pointer and contains a scaled copy of the page
+         to produce a magnifying glass effect. It sits outside of the main page content
+         so it doesn’t get cloned when the content is duplicated. -->
+    <div id="lens" aria-hidden="true">
+      <div id="lens-content"></div>
+    </div>
+
+    <!-- Main page content wrapped in a container so it can be cloned for the lens -->
+    <div id="page-content">
+      <header class="glass card">
+        <h1>Kavin R V</h1>
+        <p class="subtitle">
+          PhD student at IIT Kharagpur&nbsp;&ndash; exploring Large Language
+          Models, Natural Language Processing and Information Retrieval
+        </p>
+        <button id="theme-toggle" aria-label="Toggle dark/light theme">
+          Toggle theme
+        </button>
+      </header>
+
+      <section class="glass card">
+        <h2>About</h2>
+        <p>
+          I am a doctoral researcher at the Indian Institute of Technology
+          Kharagpur with experience in pre‑doctoral and BS‑MS research roles.
+          My work lies at the intersection of large language models, natural
+          language processing and information retrieval, with a particular
+          interest in how information is represented across word and document
+          embeddings. I have explored knowledge‑intensive tasks such as question
+          answering, generative retrieval and dialogue systems, using models
+          such as LLaMA, Phi, Qwen and T5, and incorporating techniques like
+          reinforcement learning from human feedback (RLHF) and adapter‑based
+          fine tuning.
+        </p>
+      </section>
+
+      <section class="glass card">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>Pre‑doctoral researcher, IIT Kharagpur (May 2024 – Jul 2025)</strong> –
+            developed query auto‑suggestion systems using prefix trees,
+            generative models and extreme classification techniques and
+            explored RLHF‑inspired methods to improve robustness.
+          </li>
+          <li>
+            <strong>MS thesis, IISER Bhopal (Jun 2023 – May 2024)</strong> – researched
+            generative retrieval with document‑aware representations and a
+            curriculum‑based contrastive framework.
+          </li>
+          <li>
+            <strong>Research intern, IIT Hyderabad (May 2023 – Sep 2023)</strong> –
+            investigated efficient context representation for dialogue systems,
+            building modules to select knowledge and generate responses.
+          </li>
+        </ul>
+      </section>
+
+      <section class="glass card">
+        <h2>Highlights</h2>
+        <ul>
+          <li>
+            Proposed <em>Aggregate Semantic Grouping</em>, a technique that uses
+            product quantisation to break token representations into shared
+            semantic components, achieving 99.5 % compression while retaining
+            over 95 % task performance.
+          </li>
+          <li>
+            Introduced document‑aware contrastive learning for generative
+            retrieval; accepted at the GenIR@SIGIR24 workshop.
+          </li>
+          <li>
+            Co‑authored a paper on extreme compression in token representations,
+            presented at EMNLP 2025 findings.
+          </li>
+        </ul>
+      </section>
+
+      <section class="glass card">
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out via
+          <a href="mailto:kavinrv13@gmail.com">kavinrv13@gmail.com</a> or
+          visit my
+          <a href="https://github.com/KavinRV" target="_blank">GitHub</a>
+          and
+          <a
+            href="https://scholar.google.com/citations?user=pD0Ji8QAAAAJ&hl=en"
+            target="_blank"
+            >Google Scholar</a
+          >.
+        </p>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
