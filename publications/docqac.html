@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocQAC: Adaptive Trie-Guided Decoding for Effective In-Document Query Auto-Completion · Kavin R V</title>
+  <meta name="description" content="DocQAC: Adaptive Trie-Guided Decoding for Effective In-Document Query Auto-Completion — SIGIR 2026.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23C0E1D2'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%232C4A44' font-family='Georgia,serif'>K</text></svg>">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html"><span>Kavin R V</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../news.html">News</a>
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="petals page-petals" aria-hidden="true">
+    <svg class="petal lav s1" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+    <svg class="petal s2" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+    <svg class="petal lav s3" viewBox="0 0 24 24"><path d="M12 1C17 8 17 15 12 23 7 15 7 8 12 1Z"/></svg>
+    <svg class="petal teal s4" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+    <svg class="petal s5" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+  </div>
+
+  <main class="container paper">
+    <h1 class="paper-title serif">DocQAC: Adaptive Trie-Guided Decoding for Effective In-Document Query Auto-Completion</h1>
+    <p class="paper-authors">Rahul Mehta, <strong>Kavin R V</strong>, Indrajit Pal, Tushar Abhishek, Pawan Goyal, Manish Gupta</p>
+    <p class="paper-date">April 2026</p>
+
+    <div class="pub-links">
+      <a class="btn-sm" href="https://arxiv.org/pdf/2604.18257" target="_blank" rel="noopener">PDF</a>
+      <a class="btn-sm" href="https://arxiv.org/abs/2604.18257" target="_blank" rel="noopener">arXiv</a>
+      <a class="btn-sm" href="https://github.com/rahcode7/DocQAC" target="_blank" rel="noopener">Code</a>
+      <a class="btn-sm" href="https://bit.ly/3IGEkbH" target="_blank" rel="noopener">Dataset</a>
+    </div>
+
+    <h2>Abstract</h2>
+    <p class="abstract">
+      Query auto-completion (QAC) has been widely studied in the context of web search, yet remains
+      underexplored for in-document search, which we term DocQAC. DocQAC aims to enhance search
+      productivity within long documents by helping users craft faster, more precise queries, even for
+      complex or hard-to-spell terms. While global historical queries are available to both WebQAC and
+      DocQAC, DocQAC uniquely accesses document-specific context, including the current document's
+      content and its specific history of user query interactions. To address this setting, we propose a
+      novel adaptive trie-guided decoding framework that uses user query prefixes to softly steer
+      language models toward high-quality completions. Our approach introduces an adaptive penalty
+      mechanism with tunable hyperparameters, enabling a principled trade-off between model confidence
+      and trie-based guidance. To efficiently incorporate document context, we explore
+      retrieval-augmented generation (RAG) and lightweight contextual document signals such as titles,
+      keyphrases, and summaries. When applied to encoder-decoder models like T5 and BART, our
+      trie-guided framework outperforms strong baselines and even surpasses much larger
+      instruction-tuned models such as LLaMA-3 and Phi-3 on seen queries across both seen and unseen
+      documents. This demonstrates its practicality for real-world DocQAC deployments, where efficiency
+      and scalability are critical. We evaluate our method on a newly introduced DocQAC benchmark
+      derived from ORCAS, enriched with query-document pairs. We make both the DocQAC dataset and code
+      publicly available.
+    </p>
+
+    <table class="meta">
+      <tr><th>Type</th><td>Conference paper</td></tr>
+      <tr><th>Publication</th><td>In <em>Proceedings of SIGIR 2026</em></td></tr>
+      <tr><th>Preprint</th><td><a href="https://arxiv.org/abs/2604.18257" target="_blank" rel="noopener">arXiv:2604.18257</a></td></tr>
+    </table>
+
+    <div class="share" aria-label="Share this paper">
+      <a data-share="twitter" href="#" aria-label="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a data-share="facebook" href="#" aria-label="Share on Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a data-share="email" href="#" aria-label="Share by email"><i class="fa-solid fa-envelope"></i></a>
+      <a data-share="linkedin" href="#" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a data-share="whatsapp" href="#" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <h2>Related</h2>
+    <ul class="related-list">
+      <li><a href="breaking-tokens.html">Breaking Token Into Concepts: Exploring Extreme Compression in Token Representation Via Compositional Shared Semantics</a></li>
+      <li><a href="document-aware.html">Document Aware Contrastive Learning Approach for Generative Retrieval</a></li>
+    </ul>
+  </main>
+
+  <footer>&copy; 2026 Kavin R V &middot; Built with plain HTML &amp; CSS &middot; Hosted on GitHub Pages</footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

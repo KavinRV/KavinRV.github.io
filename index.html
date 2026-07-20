@@ -1,112 +1,216 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kavin R V – AI Researcher</title>
-    <!-- Import a modern sans‑serif font for a clean, academic feel -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- The lens element follows the pointer and contains a scaled copy of the page
-         to produce a magnifying glass effect. It sits outside of the main page content
-         so it doesn’t get cloned when the content is duplicated. -->
-    <div id="lens" aria-hidden="true">
-      <div id="lens-content"></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavin R V</title>
+  <meta name="description" content="Kavin R V — researcher at Indian Institute of Technology Kharagpur working on Information Retrieval and Natural Language Processing.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23C0E1D2'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%232C4A44' font-family='Georgia,serif'>K</text></svg>">
+  <script>/* apply saved theme before first paint */try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+
+  <!-- ============ Sticky navigation ============ -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span>Kavin R V</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a> <!-- scrolls down on this page -->
+        <a href="news.html">News</a>             <!-- opens the News page -->
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Mint band: About + News ============ -->
+    <div class="band-mint">
+      <div class="petals" aria-hidden="true"><!-- decorative leaves & petals; delete this div to remove them -->
+        <svg class="petal p1" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal lav p2" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal p3" viewBox="0 0 24 24"><path d="M12 1C17 8 17 15 12 23 7 15 7 8 12 1Z"/></svg>
+        <svg class="petal lav p4" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal teal p5" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal p6" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal lav p7" viewBox="0 0 24 24"><path d="M12 1C17 8 17 15 12 23 7 15 7 8 12 1Z"/></svg>
+        <svg class="petal p8" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal peach p9" viewBox="0 0 24 24"><path d="M12 1C17 8 17 15 12 23 7 15 7 8 12 1Z"/></svg>
+        <svg class="petal lav p10" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal p11" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal p12" viewBox="0 0 24 24"><path d="M12 1C17 8 17 15 12 23 7 15 7 8 12 1Z"/></svg>
+      </div>
+      <div class="container">
+
+        <section id="about" class="about-grid">
+
+          <!-- Profile (flush with the page — no card box) -->
+          <aside class="profile-card">
+            <!-- Drop your photo at assets/profile.jpg (square works best).
+                 The placeholder is shown automatically until then. -->
+            <div class="avatar-frame">
+              <img class="avatar" src="assets/profile.jpg" alt="Portrait of Kavin R V"
+                   onerror="this.onerror=null;this.src='assets/profile-placeholder.svg';">
+            </div>
+            <h1 class="profile-name">Kavin R V</h1>
+            <p class="affiliation">Indian Institute of Technology&nbsp;Kharagpur</p>
+            <div class="socials">
+              <!-- TODO: replace the # links and email with your real profiles -->
+              <a href="mailto:your.email@iitkgp.ac.in" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://scholar.google.com/citations?user=pD0Ji8QAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+              <a class="cv-link" href="assets/cv.pdf" target="_blank" rel="noopener" aria-label="Curriculum Vitae" title="Curriculum Vitae">CV</a>
+            </div>
+          </aside>
+
+          <!-- About text, interests, education, experience, news -->
+          <div class="about-content">
+            <h2 class="section-title">About</h2>
+            <p class="bio">
+              <!-- TODO: replace with your own bio -->
+              I am a researcher at the Indian Institute of Technology Kharagpur. My work sits at the
+              intersection of information retrieval and natural language processing &mdash; including
+              query auto-completion for in-document search, generative retrieval, and compact,
+              compositional token representations for language models.
+            </p>
+
+            <div class="info-grid">
+              <div>
+                <h3>Interests</h3>
+                <ul class="interests">
+                  <li>Information Retrieval</li>
+                  <li>Natural Language Processing</li>
+                  <li>Generative Retrieval</li>
+                  <li>Efficient Language Models</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Education</h3>
+                <ul class="edu">
+                  <!-- TODO: fill in your actual degrees and years -->
+                  <li><i class="fa-solid fa-graduation-cap"></i>
+                    <span>Ph.D. in Computer Science, 20XX &ndash; Present
+                      <span class="school">Indian Institute of Technology Kharagpur</span></span>
+                  </li>
+                  <li><i class="fa-solid fa-graduation-cap"></i>
+                    <span>B.Tech / M.Tech in Computer Science, 20XX &ndash; 20XX
+                      <span class="school">Your previous university</span></span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>Experience</h3>
+                <ul class="edu">
+                  <li><i class="fa-solid fa-briefcase"></i>
+                    <span>Research Intern, May 2026 &ndash; Aug 2026
+                      <span class="school">Dolby</span></span>
+                  </li>
+                  <li><i class="fa-solid fa-briefcase"></i>
+                    <span>Senior Project Officer (Research), Aug 2024 &ndash; Jul 2025
+                      <span class="school">Indian Institute of Technology Kharagpur</span></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ============ News: scrolls within itself, flush with the page ============ -->
+            <div class="news-box">
+              <div class="news-head">
+                <h2>News</h2>
+                <a class="see-all" href="news.html">View all &rarr;</a>
+              </div>
+              <div class="news-scroll" tabindex="0">
+                <!-- Format: [Date]: News. Newest first. Dates below are placeholders — adjust them. -->
+                <p class="news-item"><span class="news-date">[1st Jul 2026]:</span> Placeholder entry &mdash; edit the news list in <code>index.html</code> and <code>news.html</code>.</p>
+                <p class="news-item"><span class="news-date">[May 2026]:</span> Joined <strong>Dolby</strong> as a Research Intern.</p>
+                <p class="news-item"><span class="news-date">[15th Apr 2026]:</span> &#127881; <a href="publications/docqac.html">DocQAC</a> has been accepted to <strong>SIGIR 2026</strong>!</p>
+                <p class="news-item"><span class="news-date">[5th Nov 2025]:</span> Presented <a href="publications/breaking-tokens.html">Breaking Token Into Concepts</a> at EMNLP 2025.</p>
+                <p class="news-item"><span class="news-date">[21st Aug 2025]:</span> &#127881; <a href="publications/breaking-tokens.html">Breaking Token Into Concepts</a> has been accepted to the <strong>Findings of EMNLP 2025</strong>!</p>
+                <p class="news-item"><span class="news-date">[Aug 2024]:</span> Joined <strong>IIT Kharagpur</strong> as a Senior Project Officer (Research).</p>
+                <p class="news-item"><span class="news-date">[14th Jul 2024]:</span> Presented <a href="publications/document-aware.html">Document Aware Contrastive Learning</a> at the GenIR workshop, SIGIR 2024.</p>
+                <p class="news-item"><span class="news-date">[24th May 2024]:</span> &#127881; <a href="publications/document-aware.html">Document Aware Contrastive Learning</a> accepted at the <strong>GenIR workshop @ SIGIR 2024</strong>!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
-    <!-- Main page content wrapped in a container so it can be cloned for the lens -->
-    <div id="page-content">
-      <header class="glass card">
-        <h1>Kavin R V</h1>
-        <p class="subtitle">
-          PhD student at IIT Kharagpur&nbsp;&ndash; exploring Large Language
-          Models, Natural Language Processing and Information Retrieval
-        </p>
-        <button id="theme-toggle" aria-label="Toggle dark/light theme">
-          Toggle theme
-        </button>
-      </header>
+    <!-- ============ Lighter band: Publications (nav link scrolls here) ============ -->
+    <div class="band-cream">
+      <div class="petals" aria-hidden="true">
+        <svg class="petal lav q1" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal q2" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal lav q3" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal q4" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal teal q5" viewBox="0 0 24 24"><path d="M12 1C17 8 17 15 12 23 7 15 7 8 12 1Z"/></svg>
+        <svg class="petal q6" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+        <svg class="petal lav q7" viewBox="0 0 24 24"><path d="M20 4C20 13 13 20 4 20 4 11 11 4 20 4Z"/></svg>
+      </div>
+      <div class="container">
+        <section id="publications" class="pub-section">
+          <h2 class="pub-heading serif">Publications</h2>
+          <div class="pub-list">
 
-      <section class="glass card">
-        <h2>About</h2>
-        <p>
-          I am a doctoral researcher at the Indian Institute of Technology
-          Kharagpur with experience in pre‑doctoral and BS‑MS research roles.
-          My work lies at the intersection of large language models, natural
-          language processing and information retrieval, with a particular
-          interest in how information is represented across word and document
-          embeddings. I have explored knowledge‑intensive tasks such as question
-          answering, generative retrieval and dialogue systems, using models
-          such as LLaMA, Phi, Qwen and T5, and incorporating techniques like
-          reinforcement learning from human feedback (RLHF) and adapter‑based
-          fine tuning.
-        </p>
-      </section>
+            <article class="pub">
+              <p class="pub-cite">
+                <i class="fa-regular fa-file-lines"></i>
+                Rahul Mehta, <strong>Kavin R V</strong>, Indrajit Pal, Tushar Abhishek, Pawan Goyal, Manish Gupta (2026).
+                <a class="pub-title" href="publications/docqac.html">DocQAC: Adaptive Trie-Guided Decoding for Effective In-Document Query Auto-Completion</a>.
+                In <em>SIGIR 2026</em>.
+              </p>
+              <div class="pub-links">
+                <a class="btn-sm" href="https://arxiv.org/pdf/2604.18257" target="_blank" rel="noopener">PDF</a>
+                <a class="btn-sm" href="https://arxiv.org/abs/2604.18257" target="_blank" rel="noopener">arXiv</a>
+                <a class="btn-sm" href="https://github.com/rahcode7/DocQAC" target="_blank" rel="noopener">Code</a>
+                <a class="btn-sm" href="https://bit.ly/3IGEkbH" target="_blank" rel="noopener">Dataset</a>
+                <a class="btn-sm" href="https://twitter.com/intent/tweet?text=DocQAC%3A%20Adaptive%20Trie-Guided%20Decoding%20for%20Effective%20In-Document%20Query%20Auto-Completion&amp;url=https%3A%2F%2Farxiv.org%2Fabs%2F2604.18257" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Tweet</a>
+              </div>
+            </article>
 
-      <section class="glass card">
-        <h2>Experience</h2>
-        <ul>
-          <li>
-            <strong>Pre‑doctoral researcher, IIT Kharagpur (May 2024 – Jul 2025)</strong> –
-            developed query auto‑suggestion systems using prefix trees,
-            generative models and extreme classification techniques and
-            explored RLHF‑inspired methods to improve robustness.
-          </li>
-          <li>
-            <strong>MS thesis, IISER Bhopal (Jun 2023 – May 2024)</strong> – researched
-            generative retrieval with document‑aware representations and a
-            curriculum‑based contrastive framework.
-          </li>
-          <li>
-            <strong>Research intern, IIT Hyderabad (May 2023 – Sep 2023)</strong> –
-            investigated efficient context representation for dialogue systems,
-            building modules to select knowledge and generate responses.
-          </li>
-        </ul>
-      </section>
+            <article class="pub">
+              <p class="pub-cite">
+                <i class="fa-regular fa-file-lines"></i>
+                <strong>Kavin R V</strong>, Pawan Goyal (2025).
+                <a class="pub-title" href="publications/breaking-tokens.html">Breaking Token Into Concepts: Exploring Extreme Compression in Token Representation Via Compositional Shared Semantics</a>.
+                In <em>Findings of EMNLP 2025</em>.
+              </p>
+              <div class="pub-links">
+                <a class="btn-sm" href="https://aclanthology.org/2025.findings-emnlp.1319.pdf" target="_blank" rel="noopener">PDF</a>
+                <a class="btn-sm" href="https://aclanthology.org/2025.findings-emnlp.1319/" target="_blank" rel="noopener">Anthology</a>
+                <a class="btn-sm" href="https://twitter.com/intent/tweet?text=Breaking%20Token%20Into%20Concepts&amp;url=https%3A%2F%2Faclanthology.org%2F2025.findings-emnlp.1319%2F" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Tweet</a>
+              </div>
+            </article>
 
-      <section class="glass card">
-        <h2>Highlights</h2>
-        <ul>
-          <li>
-            Proposed <em>Aggregate Semantic Grouping</em>, a technique that uses
-            product quantisation to break token representations into shared
-            semantic components, achieving 99.5 % compression while retaining
-            over 95 % task performance.
-          </li>
-          <li>
-            Introduced document‑aware contrastive learning for generative
-            retrieval; accepted at the GenIR@SIGIR24 workshop.
-          </li>
-          <li>
-            Co‑authored a paper on extreme compression in token representations,
-            presented at EMNLP 2025 findings.
-          </li>
-        </ul>
-      </section>
+            <article class="pub">
+              <p class="pub-cite">
+                <i class="fa-regular fa-file-lines"></i>
+                <strong>Kavin R V</strong>, Maunendra Sankar Desarkar (2024).
+                <a class="pub-title" href="publications/document-aware.html">Document Aware Contrastive Learning Approach for Generative Retrieval</a>.
+                In <em>GenIR Workshop @ SIGIR 2024</em>.
+              </p>
+              <div class="pub-links">
+                <a class="btn-sm" href="https://openreview.net/pdf?id=P04rZjcgF7" target="_blank" rel="noopener">PDF</a>
+                <a class="btn-sm" href="https://openreview.net/forum?id=P04rZjcgF7" target="_blank" rel="noopener">OpenReview</a>
+                <a class="btn-sm" href="https://twitter.com/intent/tweet?text=Document%20Aware%20Contrastive%20Learning%20Approach%20for%20Generative%20Retrieval&amp;url=https%3A%2F%2Fopenreview.net%2Fforum%3Fid%3DP04rZjcgF7" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Tweet</a>
+              </div>
+            </article>
 
-      <section class="glass card">
-        <h2>Contact</h2>
-        <p>
-          Feel free to reach out via
-          <a href="mailto:kavinrv13@gmail.com">kavinrv13@gmail.com</a> or
-          visit my
-          <a href="https://github.com/KavinRV" target="_blank">GitHub</a>
-          and
-          <a
-            href="https://scholar.google.com/citations?user=pD0Ji8QAAAAJ&hl=en"
-            target="_blank"
-            >Google Scholar</a
-          >.
-        </p>
-      </section>
+          </div>
+        </section>
+      </div>
     </div>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer>&copy; 2026 Kavin R V &middot; Built with plain HTML &amp; CSS &middot; Hosted on GitHub Pages</footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
