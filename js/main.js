@@ -10,12 +10,18 @@
   (function render() {
     var news = window.SITE_NEWS || [];
     var pubs = window.SITE_PUBS || [];
+    var missing = !(window.SITE_NEWS && window.SITE_PUBS);
+    var note = '<p class="news-item data-missing">Couldn\'t load <code>js/data.js</code> &mdash; make sure that file was uploaded next to <code>main.js</code>.</p>';
 
     var box = document.getElementById('news-list');            /* home: scrolling box */
-    if (box) news.forEach(function (n) { box.insertAdjacentHTML('beforeend', newsItemHTML(n)); });
+    if (box) {
+      if (missing) box.insertAdjacentHTML('beforeend', note);
+      news.forEach(function (n) { box.insertAdjacentHTML('beforeend', newsItemHTML(n)); });
+    }
 
     var page = document.getElementById('news-page-list');      /* news.html: grouped by year */
     if (page) {
+      if (missing) page.insertAdjacentHTML('beforeend', note);
       var years = [], byYear = {};
       news.forEach(function (n) {
         var y = n.date.slice(-4);
@@ -29,6 +35,7 @@
     }
 
     var list = document.querySelector('.pub-list');            /* home: publications */
+    if (list && missing) list.insertAdjacentHTML('beforeend', note);
     if (list) pubs.forEach(function (p) {
       var links = (p.links || []).map(function (l) {
         return '<a class="btn-sm" href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>';
