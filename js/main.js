@@ -11,7 +11,7 @@
     var news = window.SITE_NEWS || [];
     var pubs = window.SITE_PUBS || [];
     var missing = !(window.SITE_NEWS && window.SITE_PUBS);
-    var note = '<p class="news-item data-missing">Couldn\'t load <code>js/data.js</code> &mdash; make sure that file was uploaded next to <code>main.js</code>.</p>';
+    var note = '<p class="news-item data-missing">Couldn\'t read <code>js/data.js</code> &mdash; it is missing, or it has a syntax error (a missing comma or quote). Open the browser console: the error names the exact line.</p>';
 
     var box = document.getElementById('news-list');            /* home: scrolling box */
     if (box) {
