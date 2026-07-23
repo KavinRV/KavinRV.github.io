@@ -41,7 +41,8 @@ window.SITE_PUBS = [
     venue: 'Findings of EMNLP 2025',
     page: 'publications/breaking-tokens.html',
     links: [
-      { label: 'PDF',       url: 'https://aclanthology.org/2025.findings-emnlp.1319.pdf' },
+      { label: 'PDF',       url: 'https://aclanthology.org/2025.findings-emnlp.1319.pdf' }
+      { label: 'arXiv',     url: 'https://arxiv.org/pdf/2509.17737'},
       { label: 'Anthology', url: 'https://aclanthology.org/2025.findings-emnlp.1319/' }
     ],
     tweet: 'https://twitter.com/intent/tweet?text=Breaking%20Token%20Into%20Concepts&url=https%3A%2F%2Faclanthology.org%2F2025.findings-emnlp.1319%2F'
