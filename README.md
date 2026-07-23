@@ -1,70 +1,53 @@
 # Kavin R V — Personal Academic Website
 
-A simple, responsive site built with plain HTML, CSS, and a little vanilla JS. No build step, no framework — just push it to GitHub and it works.
+A simple, responsive site built with plain HTML, CSS, and a little vanilla JS. No build step — push it to GitHub and it works.
 
 ## How the site is organized
 
 ```
 index.html                       Home: About + scrollable News box + Publications
-news.html                        Full news page (opened from the "News" nav link)
+news.html                        Full news page (grouped by year)
 publications/
   docqac.html                    Paper page: DocQAC (SIGIR 2026)
   breaking-tokens.html           Paper page: Breaking Token Into Concepts (EMNLP 2025 Findings)
   document-aware.html            Paper page: Document Aware Contrastive Learning (GenIR @ SIGIR 2024)
-css/style.css                    All styling (colors live in the :root variables at the top)
-js/main.js                       Dark-mode toggle + share buttons
-assets/                          Put profile.jpg and cv.pdf here
+js/data.js                       ★ ONE place to edit News + Publications (both pages render from it)
+js/main.js                       Theme toggle & transition, edge effects, rendering, share links
+css/style.css                    All styling (light = glass, dark = metal; variables up top)
+assets/cv.pdf                    Your CV (the "CV" button links here)
 ```
 
-Navigation behavior (as requested):
-- **About** and **Publications** scroll within the home page (Publications is a smooth anchor scroll).
-- **News** opens its own page (`news.html`); the home page also has a compact news box that scrolls within itself.
-- Clicking a **paper title** opens that paper's own page with the abstract and links.
+Navigation: **About** and **Publications** live on the home page (Publications is a smooth anchor scroll); **News** opens its own page; each paper title opens its own detail page.
 
-## Things to customize (search for `TODO` in the files)
+## Editing content — one place
 
-1. **Profile photo** — drop a square-ish image at `assets/profile.jpg`. A placeholder avatar is shown until you do.
-2. **CV** — drop your CV at `assets/cv.pdf`.
-3. **Email + social links** — in `index.html`, the `.socials` block (LinkedIn, GitHub, X are `#` placeholders; the Google Scholar link is already real).
-4. **Bio, interests, education, experience** — in `index.html`. Education entries are placeholders; the Experience entries (Dolby, IIT Kharagpur) are real.
-5. **News** — edit both the short list in `index.html` and the full list in `news.html`. Format: `[Date]: news text`. The dates I used for acceptances are approximate placeholders — correct them.
-6. **Colors** — the page carries the colour (mint `#C0E1D2` / sage / cream `#F6F4E8` with steel-blue and peach glows, from the two colorhunt palettes you shared), while the single bold accent is bright red `--accent: #E63946`, rationed to metal glints: the reflection that slides along the navbar edge as you scroll, the chrome ring around the portrait, the footer edge, and hover pops. Everything lives in the CSS variables at the top of `css/style.css`; the scroll-linked shine is the `--sp` variable set in `js/main.js`.
-7. **Petals** — the three drifting petals are decorative; delete the `<div class="petals">` block in `index.html` to remove them.
+- **News**: edit the `SITE_NEWS` array in `js/data.js`. Format: `{ date: "Mon YYYY", html: "…" }`, newest first. The home-page box *and* the News page update together.
+- **Publications**: edit the `SITE_PUBS` array in `js/data.js` — the home-page list renders from it (title, authors, venue, buttons, Tweet link). For a brand-new paper, also copy one of the pages in `publications/` and edit its title/abstract/links, then point the entry's `page` field at it.
 
-## Adding a new publication later
+## Things you may still want to change
 
-1. Copy one of the files in `publications/` (e.g. `docqac.html`), rename it, and edit the title, authors, date, abstract, links, and the "Related" list.
-2. Add a matching entry (an `<article class="pub">` block) at the top of the Publications list in `index.html`.
-3. Optionally add a news item announcing it.
+1. **Social links** — in `index.html`, the `.socials` block: email and Google Scholar are real; LinkedIn, GitHub, and X are `#` placeholders.
+2. **CV** — your real CV is at `assets/cv.pdf`; replace the file whenever you update it.
+3. **Profile photo** — intentionally none right now. To add one later, put an `<img>` back at the top of the `.profile-card` aside in `index.html`.
+4. **Colors & moods** — light mode is frosted glass over cool mint/sage (`--bg: #B4D6CD`, `--bg-light: #DDE6DF`); dark mode is brushed gunmetal with the bright-red glint (`--accent: #E63946`). Everything lives in the variables at the top of `css/style.css`. Scroll-linked reflections use `--sp`; the theme-toggle "fortify/peel" transition (lens sweep + lingering patches + edge burst) lives in `js/main.js` + the `fx-` rules in the CSS.
 
 ## Publishing on GitHub Pages
 
-**Option A — user site (recommended):** the site lives at `https://<username>.github.io`
+**Option A — user site:** create a public repo named `<username>.github.io`, put the *contents* of this folder at the repo root, push. Site: `https://<username>.github.io`.
 
-1. Create a **public** repo named exactly `<username>.github.io`.
-2. Put the *contents* of this folder at the repo root (index.html must be at the top level):
-   ```bash
-   cd kavin-website
-   git init
-   git add .
-   git commit -m "Initial website"
-   git branch -M main
-   git remote add origin https://github.com/<username>/<username>.github.io.git
-   git push -u origin main
-   ```
-3. Wait a minute or two, then visit `https://<username>.github.io`.
+```bash
+cd kavin-website
+git init && git add . && git commit -m "Website"
+git branch -M main
+git remote add origin https://github.com/<username>/<username>.github.io.git
+git push -u origin main
+```
 
-**Option B — project site:** the site lives at `https://<username>.github.io/<repo-name>`
-
-1. Push this folder to any public repo.
-2. On GitHub: **Settings → Pages → Source: Deploy from a branch → main → / (root) → Save.**
+**Option B — project site:** push to any public repo, then **Settings → Pages → Deploy from a branch → main → / (root)**. Site: `https://<username>.github.io/<repo-name>`.
 
 ## Previewing locally
 
 ```bash
 cd kavin-website
-python3 -m http.server 8000
-# open http://localhost:8000
+python3 -m http.server 8000   # open http://localhost:8000
 ```
-
-(Opening index.html directly in a browser also works.)
